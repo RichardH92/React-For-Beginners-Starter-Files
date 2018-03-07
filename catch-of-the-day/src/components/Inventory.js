@@ -1,9 +1,15 @@
-import React, {Component} from "react";
+import React, { Component, Fragment } from "react";
+import AddFishForm from "./AddFishForm";
 
 class Inventory extends Component {
     render() {
         return (
-            <div>Inventory</div>
+            <Fragment>
+                <div className="inventory">
+                    <h2>Inventory</h2>
+                    <AddFishForm addFish={this.props.addFish}/>
+                </div>
+            </Fragment>
         );
     }
 }
