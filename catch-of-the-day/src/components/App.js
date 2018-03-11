@@ -48,7 +48,7 @@ class App extends Component {
                     addFish={this.addFish}
                     loadSampleFishes={this.loadSampleFishes}
                 />
-                <Order/>
+                <Order fishes={this.state.fishes} order={this.state.order}/>
             </div>
         )
     }
