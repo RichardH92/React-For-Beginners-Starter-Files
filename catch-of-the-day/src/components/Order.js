@@ -4,9 +4,12 @@ import { formatPrice } from "../helpers";
 class Order extends Component {
     renderOrder = (key) => {
         const fish = this.props.fishes[key];
+
+        if (!fish) return null;
+
         const count = this.props.order[key];
         const isAvailable = fish.status === "available";
-
+        
         if (!isAvailable) {
             return (<li key={key}>
                 Sorry {fish ? fish.name : "fish"} is no longer available
