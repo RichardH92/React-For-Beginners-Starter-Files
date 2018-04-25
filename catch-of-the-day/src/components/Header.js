@@ -1,4 +1,7 @@
 import React, {Component, Fragment} from "react";
+import PropTypes from "prop-types";
+
+
 
 const Header = ({tagline}) => (
     <Fragment>
@@ -17,5 +20,9 @@ const Header = ({tagline}) => (
         </header>
     </Fragment>
 );
+
+Header.propTypes = {
+    tagline: PropTypes.string.isRequired
+};
 
 export default Header;
